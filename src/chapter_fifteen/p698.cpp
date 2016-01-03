@@ -41,9 +41,8 @@ protected:
 class Bulk_item : public Item_base {
 public:
 #if 1
-    Bulk_item(const string isbn = "", const double price = 0.f) {
-        isbn_ = isbn;
-        price_ = price;
+    Bulk_item(const string isbn = "", const double price = 0.f) 
+        : Item_base(isbn, price) {
     }
 #else
     // error c2614
